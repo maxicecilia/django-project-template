@@ -1,0 +1,13 @@
+# Pylint configuration for use with SonarQube scanner
+# Note: this is not meant to be used by Pylint alone, as it relies in rule
+# configurations/customizations present only in a SonarQube server
+
+[MASTER]
+load-plugins=pylint_django
+
+[TYPECHECK]
+ignore-mixin-members=yes
+defining-attr-methods=__init__,__new__,setUp
+
+[VARIABLES]
+init-import=no

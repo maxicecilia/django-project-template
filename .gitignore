@@ -1,22 +1,66 @@
-*.sw[po]
-*.py[co]
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Packaging files:
+*.egg*
+
+# Sphinx docs:
+build
+
+# SQLite3 database files:
+*.db
+*.sqlite3
+*.sqlite
+
+# Logs:
+*.log*
+
+# Environment variables
+local.env
+
+# Django stuff:
+*.mo
+*.pot
+
+# Eclipse
 .project
 .pydevproject
+.settings
+
+# Linux Editors
 *~
-*.db
-*.orig
-*.DS_Store
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+*.swp
+*.swo
+
+# Pycharm
+.idea/
+.pycharm-bash
+
+# Local and active settings
+/{{ project_name }}/settings/local.py
+/{{ project_name }}/settings/environment_overrides/active.py
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Django
+{{ project_name }}/media/*
+
+# Coverage and analysis reports/logs
 .coverage
-coverage
-.vagrant
-*/settings/local.py
-public/static/
-public/media/
-conf/pillar/*/deploy
-*.priv
-.env
-node_modules
-*/static/js/bundle.js
-*/static/js/vendors.js
-*/static/libs/modernizr.js
-*/static/css
+.sonar
+coverage.xml
+cover

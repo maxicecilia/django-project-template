@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+import re
+import sys
+
+
+def red(text):
+    """Wrap text with red color codes."""
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    return FAIL + text + ENDC
+
+
+def check_commit_message(message_path):
+    """Validate commit message format"""
+    message_file = open(message_path)
+    message = message_file.read()
+    message_file.close()
+    msg_re = r'^((\[[A-Z]{2,5}\-\d+\])|^([Mm]erge)|^([Bb]ump)|(\[HOTFIX\]))\s'
+
+    # Comments must start with ticket number tag
+    if not re.search(msg_re, message):
+        print red("[ERROR] Invalid commit msg!")
+        print "You should start with a ticket number like [ST-007] \U00002620"
+        exit(1)
+    exit(0)
+
+
+if __name__ == '__main__':
+    try:
+        message_path = sys.argv[1]
+    except IndexError:
+        print "ERROR: commit message path missing."
+        exit(1)
+
+    check_commit_message(message_path)

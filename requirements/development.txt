@@ -1,0 +1,3 @@
+-r ci.txt
+ipython
+django-crispy-forms==1.6.0
