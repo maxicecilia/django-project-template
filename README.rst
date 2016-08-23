@@ -4,11 +4,10 @@ Installation
 
 To start a new project with this template::
 
-    django-admin.py startproject \
-      --template=https://github.com/caktus/django-project-template/zipball/master \
-      --extension=py,rst,yml \
-      --name=Makefile,gulpfile.js,package.json
-      <project_name>
+    django-admin startproject <project_name> <project_path> \
+    --template=https://github.com/maxicecilia/django-project-template/zipball/master \
+    --extension=py,rst,yml \
+    --name=Makefile,.coveragerc,.gitignore,bpd.cfg,sonar-project.properties
 
 {% endif %}
 {{ project_name|title }}
@@ -54,7 +53,4 @@ Postgres named "{{ project_name }}" with all migrations run::
 
 If you require a non-standard setup, you can walk through the Makefile to understand the required steps.
 
-If necessary, create the Postgres database and run the initial migrate::
-
-    ({{ project_name }})$ createdb -E UTF-8 {{ project_name }}
-    ({{ project_name }})$ python manage.py migrate
+Last but not least, drink a beer and have fun.
