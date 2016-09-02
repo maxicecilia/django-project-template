@@ -53,4 +53,12 @@ Postgres named "{{ project_name }}" with all migrations run::
 
 If you require a non-standard setup, you can walk through the Makefile to understand the required steps.
 
+Running tests
+------------------------
+
+In order to run the unit test suit and the coverage report, you need to run:
+
+    $ workon {{ project_name }}
+    $ coverage run manage.py test; coverage report -m
+
 Last but not least, drink a beer and have fun.

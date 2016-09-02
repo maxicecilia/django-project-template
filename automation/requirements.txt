@@ -1,0 +1,2 @@
+# Havanna latest version
+-e git+git@github.com:natgeo/havanna.git@master#egg=havanna

@@ -64,3 +64,8 @@ celerybeat.pid
 .sonar
 coverage.xml
 cover
+
+# Automation
+env/
+behave.ini
+page_load_time.txt
